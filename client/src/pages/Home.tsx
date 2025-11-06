@@ -9,21 +9,46 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/10 py-20 md:py-32">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
-              <Zap className="w-4 h-4" />
-              Presenting at EnerTech Forum San Diego | November 6, 2025
+      {/* Header with Banner and Logo */}
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container py-3 md:py-4 space-y-3 md:space-y-4">
+          {/* Event Banner */}
+          <div className="flex justify-center px-2">
+            <div className="inline-flex items-center gap-2 px-3 py-2 md:px-6 md:py-3 rounded-full bg-primary/20 border-2 border-primary/40 text-[10px] sm:text-xs md:text-sm font-medium text-white shadow-lg max-w-full flex-wrap justify-center">
+              <Zap className="w-3 h-3 md:w-4 md:h-4 text-primary flex-shrink-0" />
+              <span className="text-center whitespace-nowrap">
+                Presenting at EnerTech Forum San Diego
+              </span>
+              <span className="hidden sm:inline">|</span>
+              <span className="text-center whitespace-nowrap">
+                November 6, 2025
+              </span>
             </div>
+          </div>
+          
+          {/* Logo */}
+          <div className="flex justify-center items-center">
+            <img 
+              src="/shaed-logo.png" 
+              alt="SHAED" 
+              className="h-14 md:h-20 lg:h-24 w-auto"
+            />
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/10 pt-6 pb-20 md:pt-8 md:pb-32">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center space-y-10">
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              The Operating System for{" "}
-              <span className="text-primary">Modern Mobility Commerce</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+              <span className="block text-white mb-2">The Operating System for</span>
+              <span className="block text-primary">Modern Mobility</span>
+              <span className="block text-primary">Commerce</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto pt-4">
               Transforming a <strong className="text-foreground">$150 billion market</strong> trapped in 30-year-old processes
             </p>
 
@@ -510,7 +535,11 @@ export default function Home() {
       <footer className="py-12 border-t border-border bg-card">
         <div className="container">
           <div className="max-w-6xl mx-auto text-center space-y-4">
-            <div className="text-2xl font-bold text-primary">SHAED</div>
+            <img 
+              src="/shaed-logo.png" 
+              alt="SHAED" 
+              className="h-10 md:h-12 w-auto mx-auto"
+            />
             <p className="text-sm text-muted-foreground">
               The Operating System for Modern Mobility Commerce
             </p>
